@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: animalpy
+Version: 0.1.5.post2
+Summary: Python wrapper using some-random-api.ml that can get animal images and facts with easy plug-and-play syntax!
+Home-page: https://github.com/ksIsCute/Animals.py
+License: MIT
+Author: ksIsCute
+Author-email: thebeast47ytbusiness@gmail.com
+Maintainer: ksIsCute
+Maintainer-email: thebeast47ytbusiness@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/ksIsCute/Animals.py
+Description-Content-Type: text/x-rst
+
+Animals
+=======
+
+*Created by Cesiyi and KsIsCute*
+
+Examples:
+---------
+
+.. code:: py
+
+   import animals # Importing the library
+   from animals import animal # Import main class
+   picture = animal.picture("dog") # Get a dog picture
+   print(picture) # Print the link to the required picture
+
+======= ==================
+Version Support
+======= ==================
+>3.8.X  ✅
+3.0+    ✅
+2.7+    ❎
+>2.6.X  ❎
+======= ==================
+
