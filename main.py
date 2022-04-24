@@ -45,11 +45,9 @@ async def test(ctx):
 
 @client.command()
 async def cat(ctx):
-    embed = voltage.SendableEmbed(
-        description = "Mew!",
-        media = animals.picture("cat")
-    )
-    await ctx.send(content="Hav kat pic!", embed=embed)
+  msg = await ctx.reply("Hav kat pic! (Embd loading... sry 4 waitin :c )", mention=False)
+  catto = animals.picture("cat")
+  await msg.edit(embed=voltage.SendableEmbed(media=catto), content="Hav kat pic!")
 
 @client.command()
 async def catfact(ctx):
