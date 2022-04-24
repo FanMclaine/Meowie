@@ -56,4 +56,4 @@ async def catfact(ctx):
     await ctx.send(animals.fact("cat"))
 
 alive()
-client.run(os.environ.get('REPLACE_THIS_TO_SECRET_WHEN_MERGING'))
+client.run(os.environ.get('SECRET'))
