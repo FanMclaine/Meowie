@@ -29,7 +29,7 @@ async def status():
 
 @client.listen("ready")
 async def ready():
-    print("komi!!! - {client.user}")
+    print("komi!!! -",client.user)
     await status()
 
 @client.listen("message")
