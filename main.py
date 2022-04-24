@@ -26,6 +26,8 @@ async def status():
     await asyncio.sleep(10)
 
 # ez bug fix
+# line 49-52 messed up the commands
+# I say the culprit is '@client.listen' or 'async def on_message'
 
 @client.listen("ready")
 async def ready():
@@ -43,12 +45,12 @@ async def on_ping(message):
 
 @client.command()
 async def test(ctx):
-    await ctx.send("# SPREAD LUV! :cat_blob: :girl_happy:")
+    await ctx.send("> # SPREAD LUV! :ayame_heart: :girl_happy:")
 
-@client.listen("message")
-async def on_message(message):
-  if message.content.startswith("mew"):
-    await message.channel.send(" mew!")
+# @client.listen("message")
+# async def on_message(message):
+#  if message.content.startswith("mew"):
+#    await message.channel.send(" mew!")
 
 @client.command()
 async def cat(ctx):
