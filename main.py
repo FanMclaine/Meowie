@@ -34,15 +34,6 @@ async def ready():
     print("komi!!! -",client.user)
     await status()
 
-@client.listen("message")
-async def on_ping(message):
-    if message.author.bot is False:
-        await client.handle_commands(message)
-    elif message.content == "01FWZKVAJZEGH8JV4RRRSYRVAF":
-        await message.reply(f"Mah prefix iz `^`!!")
-        await client.handle_commands(message)
-        return
-
 @client.command()
 async def test(ctx):
     await ctx.send("> # SPREAD LUV! :ayame_heart: :girl_happy:")
@@ -65,4 +56,4 @@ async def catfact(ctx):
     await ctx.send(animals.fact("cat"))
 
 alive()
-client.run(os.environ.get('SECRET'))
+client.run(os.environ.get('REPLACE_THIS_TO_SECRET_WHEN_MERGING'))
