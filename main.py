@@ -50,4 +50,4 @@ async def test(ctx):
 #    await message.channel.send(" mew!")
 
 alive()
-client.run(os.environ.get('REPLACE_THIS_TO_SECRET_WHEN_MERGING'))
+client.run(os.environ.get('SECRET'))
