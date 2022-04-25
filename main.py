@@ -4,7 +4,6 @@ import asyncio
 import random
 from host import alive
 import os
-from animalpy import animals # Import main class
 
 client = commands.CommandsClient(prefix="^")
 
@@ -31,6 +30,13 @@ async def status():
 
 @client.listen("ready")
 async def ready():
+    for filename in os.listdir("./cogs"):
+        if filename.endswith(".py"):
+            try:
+                client.add_extension(f"cogs.{filename[:-3]}")
+                print(f"Just loaded {filename}")
+            except Exception as e:
+                print(e)
     print("komi!!! -",client.user)
     await status()
 
@@ -42,16 +48,6 @@ async def test(ctx):
 # async def on_message(message):
 #  if message.content.startswith("mew"):
 #    await message.channel.send(" mew!")
-
-@client.command()
-async def cat(ctx):
-  msg = await ctx.reply("Hav kat pic! (Embd loading... sry 4 waitin :c )", mention=False)
-  catto = animals.picture("cat")
-  await msg.edit(embed=voltage.SendableEmbed(media=catto), content="Hav kat pic!")
-
-@client.command()
-async def catfact(ctx):
-    await ctx.send(animals.fact("cat"))
 
 alive()
 client.run(os.environ.get('SECRET'))
