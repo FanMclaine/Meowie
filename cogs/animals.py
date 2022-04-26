@@ -10,7 +10,9 @@ def setup(client) -> commands.Cog:
         "Test", "Some commands for testing."  # Give it a name.  # And an optional description.
     )
 
-    animal = commands.Cog("Animals", "Animal commandz!")
+    animal = commands.Cog(
+      "Animals", "Animal commandz!"
+    )
 
     @test.command()
     async def pingcog(ctx):  # No self parameter.
