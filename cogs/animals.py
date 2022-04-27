@@ -43,4 +43,4 @@ def setup(client) -> commands.Cog:
       """Dog fun facts!! >:( (some may be dark)"""
       await ctx.send(animals.fact("dog"))
 
-    return test  # Finally, return the cog object.
+    return animal
